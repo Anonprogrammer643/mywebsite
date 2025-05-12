@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progress International School</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3176FF',secondary:''},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+scroll-behavior: smooth;
+background-color: #ffffff;
+color: #1f2937;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=modern%2520international%2520school%2520campus%2520with%2520diverse%2520students%2520in%2520bright%2520sunlight%252C%2520beautiful%2520architecture%252C%2520clean%2520design%252C%2520blue%2520sky%252C%2520left%2520side%2520with%2520clean%2520white%2520space%2520for%2520text%252C%2520right%2520side%2520with%2520school%2520building%2520and%2520students%252C%2520perfect%2520for%2520website%2520hero%2520section&width=1600&height=800&seq=1&orientation=landscape');
+background-size: cover;
+background-position: right center;
+}
+.hero-overlay {
+background: linear-gradient(90deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0.8) 60%, rgba(255,255,255,0) 100%);
+}
+.curriculum-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(49, 118, 255, 0.1);
+}
+.timeline-item:not(:last-child)::after {
+content: '';
+position: absolute;
+left: 17px;
+top: 32px;
+bottom: -32px;
+width: 2px;
+background-color: #e5e7eb;
+}
+.timeline-dot {
+background-color: #3176FF;
+border: 4px solid white;
+box-shadow: 0 0 0 2px #3176FF;
+}
+input:focus {
+outline: none;
+}
+.alumni-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px -5px rgba(49, 118, 255, 0.1);
+}
+.counter {
+font-variant-numeric: tabular-nums;
+}
+.scroll-reveal {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-reveal.revealed {
+opacity: 1;
+transform: translateY(0);
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+<header class="fixed w-full bg-white shadow-sm z-50">
+<div class="container mx-auto px-6 py-4 flex items-center justify-between">
+<a href="#" class="flex items-center space-x-3">
+<span class="text-primary font-['Pacifico'] text-2xl">Progress</span>
+<div class="h-6 w-px bg-gray-300"></div>
+<span class="text-gray-800 font-semibold">International School</span>
+</a>
+<nav class="hidden md:flex items-center space-x-8">
+<a href="#" id="home-link" class="text-gray-800 hover:text-primary font-medium transition-colors">Home</a>
+<a href="#about" class="text-gray-800 hover:text-primary font-medium transition-colors">About Us</a>
+<a href="#curriculum" class="text-gray-800 hover:text-primary font-medium transition-colors">Curriculum</a>
+<a href="#why" class="text-gray-800 hover:text-primary font-medium transition-colors">Why Choose Us</a>
+<a href="#community" class="text-gray-800 hover:text-primary font-medium transition-colors">Community</a>
+<a href="#contact" class="text-gray-800 hover:text-primary font-medium transition-colors">Contact</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a href="#tour" class="hidden md:block bg-primary text-white px-5 py-2 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Schedule a Tour</a>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-section min-h-[90vh] flex items-center relative">
+<div class="hero-overlay absolute inset-0"></div>
+<div class="container mx-auto px-6 py-20 relative z-10">
+<div class="w-full max-w-2xl">
+<h1 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6">Shaping Global Leaders of Tomorrow</h1>
+<p class="text-xl text-gray-700 mb-8 leading-relaxed">Progress International School combines innovative teaching methods with strong academic values to prepare students for success in a rapidly changing world.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a href="#tour" class="bg-primary text-white px-8 py-3 !rounded-button font-medium text-center hover:bg-blue-600 transition-colors whitespace-nowrap">Schedule a Tour</a>
+<a href="#curriculum" class="bg-white text-primary border-2 border-primary px-8 py-3 !rounded-button font-medium text-center hover:bg-gray-50 transition-colors whitespace-nowrap">Explore Curriculum</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section id="about" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="flex flex-col lg:flex-row gap-12 items-center">
+<div class="w-full lg:w-2/5 relative h-[500px] overflow-hidden rounded-lg shadow-lg">
+<div class="absolute inset-0 bg-primary/10 flex items-end p-6 z-10">
+<span class="text-primary font-semibold">Est. 2024</span>
+</div>
+<img src="https://readdy.ai/api/search-image?query=modern%2520international%2520school%2520building%2520with%2520diverse%2520students%2520studying%2520in%2520bright%2520modern%2520classrooms%252C%2520collaborative%2520learning%2520spaces%252C%2520high-tech%2520facilities%252C%2520professional%2520photography%2520style%252C%2520clean%2520composition%252C%2520natural%2520lighting%252C%2520showing%2520educational%2520excellence&width=600&height=800&seq=2&orientation=portrait" alt="School facilities" class="absolute inset-0 w-full h-full object-cover object-top transition-opacity duration-1000 opacity-100">
+</div>
+<div class="w-full lg:w-3/5 scroll-reveal">
+<div class="flex items-center mb-4">
+<div class="w-12 h-1 bg-primary mr-4"></div>
+<h2 class="text-3xl font-bold text-gray-900">About Us</h2>
+</div>
+<h3 class="text-4xl font-bold text-gray-900 mb-6">Welcome to Progress International School</h3>
+<p class="text-gray-700 mb-6 leading-relaxed">
+Established in September 2024, our school was founded with a bold vision: to empower young minds with a modern, globally-minded education while staying rooted in strong academic values and cultural identity.
+</p>
+<p class="text-gray-700 mb-6 leading-relaxed">
+We believe that true education goes beyond textbooks. At Progress, students are not only taught subjects—they are taught how to think, solve problems, communicate effectively, and adapt in a rapidly changing world. Our school is a safe, supportive, and intellectually stimulating environment where curiosity is celebrated, individuality is respected, and excellence is expected.
+</p>
+<a href="#curriculum" class="inline-flex items-center text-primary font-medium hover:underline">
+Discover our curriculum
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Curriculum Section -->
+<section id="curriculum" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16 scroll-reveal">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Our Curriculum</h2>
+<p class="text-xl text-gray-700 max-w-3xl mx-auto">
+We offer a carefully structured academic program that focuses on core subjects critical to both national and international success.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- English Language -->
+<div class="curriculum-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300 scroll-reveal">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-book-open-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">English Language</h3>
+<p class="text-gray-700 mb-6">
+Our primary focus is developing strong English language skills through immersive learning, literature studies, and practical communication exercises.
+</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn more
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+<!-- Information Technology -->
+<div class="curriculum-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300 scroll-reveal">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-computer-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Information Technology</h3>
+<p class="text-gray-700 mb-6">
+Students learn programming, digital literacy, and technology applications to prepare them for the digital future.
+</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn more
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+<!-- Mathematics -->
+<div class="curriculum-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300 scroll-reveal">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-calculator-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Mathematics</h3>
+<p class="text-gray-700 mb-6">
+Our mathematics program develops critical thinking and problem-solving skills through practical applications and abstract reasoning.
+</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn more
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+<!-- Native Language Studies -->
+<div class="curriculum-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300 scroll-reveal">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-translate-2 ri-lg text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Native Language Studies</h3>
+<p class="text-gray-700 mb-6">
+We preserve cultural identity through comprehensive native language programs that include literature, writing, and cultural studies.
+</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn more
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+<!-- Law and Citizenship -->
+<div class="curriculum-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300 scroll-reveal">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-scales-3-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Law and Citizenship</h3>
+<p class="text-gray-700 mb-6">
+Students learn about legal systems, civic responsibilities, and ethical decision-making to become engaged global citizens.
+</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn more
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+<!-- Russian Language -->
+<div class="curriculum-card bg-white p-8 rounded-lg shadow-sm transition-all duration-300 scroll-reveal">
+<div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+<i class="ri-earth-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Russian Language</h3>
+<p class="text-gray-700 mb-6">
+Our Russian language program develops proficiency through literature, conversation practice, and cultural immersion activities.
+</p>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Learn more
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+</div>
+<div class="mt-16 text-center scroll-reveal">
+<a href="#" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Download Full Curriculum</a>
+</div>
+</div>
+</section>
+<!-- Why Progress Section -->
+<section id="why" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16 scroll-reveal">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Why Progress International School?</h2>
+<p class="text-xl text-gray-700 max-w-3xl mx-auto">
+At Progress, we don't just prepare students for exams—we prepare them for life. We foster confidence, leadership, ethical values, and global awareness.
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+<div class="space-y-12">
+<!-- Timeline items -->
+<div class="timeline-item relative pl-12 scroll-reveal">
+<div class="timeline-dot absolute left-0 top-0 w-8 h-8 rounded-full"></div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Holistic Education</h3>
+<p class="text-gray-700">
+Our approach balances academic excellence with personal development, ensuring students grow intellectually, emotionally, and socially.
+</p>
+</div>
+<div class="timeline-item relative pl-12 scroll-reveal">
+<div class="timeline-dot absolute left-0 top-0 w-8 h-8 rounded-full"></div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Global Perspective</h3>
+<p class="text-gray-700">
+Students develop international mindedness through cultural exchanges, language learning, and global citizenship projects.
+</p>
+</div>
+<div class="timeline-item relative pl-12 scroll-reveal">
+<div class="timeline-dot absolute left-0 top-0 w-8 h-8 rounded-full"></div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Innovative Teaching</h3>
+<p class="text-gray-700">
+Our educators use modern pedagogical approaches that engage students through project-based learning, technology integration, and creative problem-solving.
+</p>
+</div>
+</div>
+<div class="space-y-12">
+<div class="timeline-item relative pl-12 scroll-reveal">
+<div class="timeline-dot absolute left-0 top-0 w-8 h-8 rounded-full"></div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Individual Attention</h3>
+<p class="text-gray-700">
+With small class sizes and personalized learning plans, we ensure each student receives the support and challenge they need to thrive.
+</p>
+</div>
+<div class="timeline-item relative pl-12 scroll-reveal">
+<div class="timeline-dot absolute left-0 top-0 w-8 h-8 rounded-full"></div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">International Partnerships</h3>
+<p class="text-gray-700">
+We've established partnerships with IDP and British Council, giving our students access to internationally recognized opportunities and certifications.
+</p>
+<div class="flex items-center space-x-6 mt-4">
+<div class="w-16 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center">
+<i class="ri-building-4-line ri-2x text-gray-700"></i>
+</div>
+<div class="w-16 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center">
+<i class="ri-government-line ri-2x text-gray-700"></i>
+</div>
+</div>
+</div>
+<div class="timeline-item relative pl-12 scroll-reveal">
+<div class="timeline-dot absolute left-0 top-0 w-8 h-8 rounded-full"></div>
+<h3 class="text-2xl font-bold text-gray-900 mb-3">Future-Ready Skills</h3>
+<p class="text-gray-700">
+Beyond academics, we emphasize critical thinking, communication, collaboration, and creativity—skills essential for success in the 21st century.
+</p>
+</div>
+</div>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 scroll-reveal">
+<div class="bg-white p-8 rounded-lg shadow-sm text-center">
+<div class="text-4xl font-bold text-primary mb-2 counter">100%</div>
+<p class="text-gray-700">University Acceptance Rate</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm text-center">
+<div class="text-4xl font-bold text-primary mb-2 counter">15:1</div>
+<p class="text-gray-700">Student-Teacher Ratio</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm text-center">
+<div class="text-4xl font-bold text-primary mb-2 counter">25+</div>
+<p class="text-gray-700">Extracurricular Activities</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm text-center">
+<div class="text-4xl font-bold text-primary mb-2 counter">12</div>
+<p class="text-gray-700">International Partnerships</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Section -->
+<section id="community" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="text-center mb-16 scroll-reveal">
+<h2 class="text-4xl font-bold text-gray-900 mb-4">Our Community</h2>
+<p class="text-xl text-gray-700 max-w-3xl mx-auto">
+We take pride in building a strong community that extends far beyond our classrooms.
+</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-12">
+<!-- Alumni Connect -->
+<div class="w-full lg:w-1/2 scroll-reveal">
+<div class="bg-white p-8 rounded-lg shadow-sm">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-user-star-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900">Alumni Connect</h3>
+</div>
+<p class="text-gray-700 mb-8">
+Our unique platform where new students can connect with graduates who have gone on to study at top universities and institutions. This network offers guidance, inspiration, and real-world advice.
+</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<!-- Alumni Card 1 -->
+<div class="alumni-card bg-gray-50 p-6 rounded-lg transition-all duration-300">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<i class="ri-user-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Alexander Chen</h4>
+<p class="text-sm text-gray-600">Class of 2025</p>
+</div>
+</div>
+<p class="text-gray-700 text-sm">Now studying Computer Science at MIT</p>
+</div>
+<!-- Alumni Card 2 -->
+<div class="alumni-card bg-gray-50 p-6 rounded-lg transition-all duration-300">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<i class="ri-user-line ri-lg text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Sophia Ivanova</h4>
+<p class="text-sm text-gray-600">Class of 2025</p>
+</div>
+</div>
+<p class="text-gray-700 text-sm">Now studying Economics at LSE</p>
+</div>
+</div>
+<a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+Connect with more alumni
+<i class="ri-arrow-right-line ri-sm ml-2"></i>
+</a>
+</div>
+</div>
+<!-- Testimonials -->
+<div class="w-full lg:w-1/2 scroll-reveal">
+<div class="bg-white p-8 rounded-lg shadow-sm h-full">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+<i class="ri-chat-quote-line ri-lg text-primary"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900">What Our Community Says</h3>
+</div>
+<div class="space-y-8">
+<!-- Testimonial 1 -->
+<div class="relative">
+<div class="absolute -left-2 -top-2 text-4xl text-primary opacity-20">
+<i class="ri-double-quotes-l"></i>
+</div>
+<div class="pl-6">
+<p class="text-gray-700 italic mb-4">
+Progress International School has transformed my daughter's approach to learning. The teachers don't just teach—they inspire curiosity and a love for knowledge.
+</p>
+<div class="flex items-center">
+<div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<i class="ri-user-line ri-sm text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Elena Petrova</h4>
+<p class="text-sm text-gray-600">Parent</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="relative">
+<div class="absolute -left-2 -top-2 text-4xl text-primary opacity-20">
+<i class="ri-double-quotes-l"></i>
+</div>
+<div class="pl-6">
+<p class="text-gray-700 italic mb-4">
+The international perspective at Progress has been invaluable. My son has developed not only academically but also as a global citizen who understands different cultures.
+</p>
+<div class="flex items-center">
+<div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-3">
+<i class="ri-user-line ri-sm text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900">Michael Johnson</h4>
+<p class="text-sm text-gray-600">Parent</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 bg-primary">
+<div class="container mx-auto px-6 text-center">
+<h2 class="text-4xl font-bold text-white mb-6 scroll-reveal">Ready to Join Our Community?</h2>
+<p class="text-xl text-white/90 max-w-2xl mx-auto mb-10 scroll-reveal">
+Take the first step toward providing your child with an exceptional international education experience.
+</p>
+<div class="flex flex-col sm:flex-row justify-center gap-4 scroll-reveal">
+<a href="#tour" class="bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">Schedule a Tour</a>
+<a href="#" class="bg-transparent text-white border-2 border-white px-8 py-3 !rounded-button font-medium hover:bg-white/10 transition-colors whitespace-nowrap">Apply Now</a>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-white">
+<div class="container mx-auto px-6">
+<div class="flex flex-col lg:flex-row gap-12">
+<div class="w-full lg:w-1/2 scroll-reveal">
+<div class="flex items-center mb-4">
+<div class="w-12 h-1 bg-primary mr-4"></div>
+<h2 class="text-3xl font-bold text-gray-900">Contact Us</h2>
+</div>
+<h3 class="text-4xl font-bold text-gray-900 mb-6">Get in Touch</h3>
+<p class="text-gray-700 mb-8 leading-relaxed">
+Have questions about our programs, admissions process, or anything else? We're here to help. Reach out to us using the contact form or the information below.
+</p>
+<div class="space-y-6 mb-8">
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+<i class="ri-map-pin-line ri-sm text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-1">Address</h4>
+<p class="text-gray-700">123 Education Avenue, International District, 10001</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+<i class="ri-phone-line ri-sm text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+<p class="text-gray-700">+1 (555) 123-4567</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4 mt-1">
+<i class="ri-mail-line ri-sm text-primary"></i>
+</div>
+<div>
+<h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+<p class="text-gray-700">admissions@progressschool.edu</p>
+</div>
+</div>
+</div>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-facebook-fill ri-sm"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-twitter-x-fill ri-sm"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-instagram-line ri-sm"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors">
+<i class="ri-linkedin-fill ri-sm"></i>
+</a>
+</div>
+</div>
+<div class="w-full lg:w-1/2 scroll-reveal">
+<form class="bg-gray-50 p-8 rounded-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+<input type="text" id="name" class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Your name">
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Your email">
+</div>
+</div>
+<div class="mb-6">
+<label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+<input type="text" id="subject" class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Subject">
+</div>
+<div class="mb-6">
+<label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+<textarea id="message" rows="5" class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Your message"></textarea>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Schedule a Tour Section -->
+<section id="tour" class="py-20 bg-gray-50">
+<div class="container mx-auto px-6">
+<div class="max-w-4xl mx-auto text-center scroll-reveal">
+<h2 class="text-4xl font-bold text-gray-900 mb-6">Schedule a Tour</h2>
+<p class="text-xl text-gray-700 mb-10">
+Experience Progress International School firsthand. Visit our campus, meet our teachers, and see our innovative learning environment in action.
+</p>
+<form class="bg-white p-8 rounded-lg shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+<div>
+<label for="tour-name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+<input type="text" id="tour-name" class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Your name">
+</div>
+<div>
+<label for="tour-email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+<input type="email" id="tour-email" class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Your email">
+</div>
+<div>
+<label for="tour-phone" class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+<input type="tel" id="tour-phone" class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Your phone">
+</div>
+<div>
+<label for="tour-date" class="block text-sm font-medium text-gray-700 mb-2">Preferred Date</label>
+<input type="date" id="tour-date" class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+</div>
+</div>
+<div class="mb-6">
+<label for="tour-message" class="block text-sm font-medium text-gray-700 mb-2">Additional Information</label>
+<textarea id="tour-message" rows="3" class="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Tell us about your child's age, grade level, and any specific interests"></textarea>
+</div>
+<button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Request Tour</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-6">
+<div class="max-w-4xl mx-auto bg-primary/5 p-10 rounded-lg text-center scroll-reveal">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Stay Updated</h2>
+<p class="text-gray-700 mb-8">
+Subscribe to our newsletter to receive updates about school events, educational insights, and community news.
+</p>
+<form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<input type="email" class="flex-grow px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Your email address">
+<button type="submit" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white pt-16 pb-8">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div>
+<a href="#" class="flex items-center space-x-3 mb-6">
+<span class="text-white font-['Pacifico'] text-2xl">Progress</span>
+<div class="h-6 w-px bg-gray-700"></div>
+<span class="text-gray-300 font-semibold">International School</span>
+</a>
+<p class="text-gray-400 mb-6">
+Empowering young minds with a modern, globally-minded education while staying rooted in strong academic values.
+</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-facebook-fill ri-sm"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-twitter-x-fill ri-sm"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-instagram-line ri-sm"></i>
+</a>
+<a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white transition-colors">
+<i class="ri-linkedin-fill ri-sm"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Quick Links</h3>
+<ul class="space-y-4">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#curriculum" class="text-gray-400 hover:text-white transition-colors">Curriculum</a></li>
+<li><a href="#why" class="text-gray-400 hover:text-white transition-colors">Why Choose Us</a></li>
+<li><a href="#community" class="text-gray-400 hover:text-white transition-colors">Community</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Programs</h3>
+<ul class="space-y-4">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Primary Education</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Secondary Education</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Language Programs</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">STEM Focus</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Arts & Creativity</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Sports & Activities</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-6">Contact</h3>
+<ul class="space-y-4">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-3 mt-1">
+<i class="ri-map-pin-line ri-sm text-primary"></i>
+</div>
+<span class="text-gray-400">123 Education Avenue, International District, 10001</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-3 mt-1">
+<i class="ri-phone-line ri-sm text-primary"></i>
+</div>
+<span class="text-gray-400">+1 (555) 123-4567</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-3 mt-1">
+<i class="ri-mail-line ri-sm text-primary"></i>
+</div>
+<span class="text-gray-400">admissions@progressschool.edu</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center mr-3 mt-1">
+<i class="ri-time-line ri-sm text-primary"></i>
+</div>
+<span class="text-gray-400">Monday-Friday: 8:00 AM - 4:30 PM</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 border-t border-gray-800 text-center">
+<p class="text-gray-500">© 2025 Progress International School. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const homeLink = document.getElementById('home-link');
+const sections = document.querySelectorAll('section');
+
+homeLink.addEventListener('click', function(e) {
+e.preventDefault();
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+
+function updateActiveSection() {
+const scrollPosition = window.scrollY;
+if (scrollPosition < 100) {
+homeLink.classList.add('text-primary');
+} else {
+homeLink.classList.remove('text-primary');
+}
+}
+
+window.addEventListener('scroll', updateActiveSection);
+updateActiveSection();
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Scroll reveal animation
+const revealElements = document.querySelectorAll('.scroll-reveal');
+function checkReveal() {
+revealElements.forEach(element => {
+const elementTop = element.getBoundingClientRect().top;
+const windowHeight = window.innerHeight;
+if (elementTop < windowHeight - 100) {
+element.classList.add('revealed');
+}
+});
+}
+// Initial check
+checkReveal();
+// Check on scroll
+window.addEventListener('scroll', checkReveal);
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Counter animation
+const counters = document.querySelectorAll('.counter');
+counters.forEach(counter => {
+const target = counter.textContent;
+const hasPercent = target.includes('%');
+const hasRatio = target.includes(':');
+let targetValue;
+if (hasPercent) {
+targetValue = parseInt(target.replace('%', ''));
+counter.textContent = '0%';
+} else if (hasRatio) {
+const [num1, num2] = target.split(':');
+targetValue = parseInt(num1);
+counter.textContent = '0:' + num2;
+} else if (target.includes('+')) {
+targetValue = parseInt(target.replace('+', ''));
+counter.textContent = '0+';
+} else {
+targetValue = parseInt(target);
+counter.textContent = '0';
+}
+const duration = 2000;
+const frameRate = 60;
+const totalFrames = duration / (1000 / frameRate);
+const increment = targetValue / totalFrames;
+let currentValue = 0;
+let frame = 0;
+function updateCounter() {
+frame++;
+currentValue += increment;
+if (currentValue >= targetValue) {
+counter.textContent = target;
+return;
+}
+if (hasPercent) {
+counter.textContent = Math.floor(currentValue) + '%';
+} else if (hasRatio) {
+const [, num2] = target.split(':');
+counter.textContent = Math.floor(currentValue) + ':' + num2;
+} else if (target.includes('+')) {
+counter.textContent = Math.floor(currentValue) + '+';
+} else {
+counter.textContent = Math.floor(currentValue);
+}
+requestAnimationFrame(updateCounter);
+}
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+requestAnimationFrame(updateCounter);
+observer.unobserve(entry.target);
+}
+});
+}, { threshold: 0.5 });
+observer.observe(counter);
+});
+});
+</script>
+</body>
+</html>
